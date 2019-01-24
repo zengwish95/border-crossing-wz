@@ -1,0 +1,21 @@
+html {
+  font-size: 20px;
+  background-color: #ebebec;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body, {
+}
+nav {
+  padding-left: 15vw;
+  padding-top: 120px;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333132;
+}
