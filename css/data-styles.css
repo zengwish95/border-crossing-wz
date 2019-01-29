@@ -27,13 +27,6 @@ html {
 }
 body {
 }
-main {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(48,1fr);
-  background-color: #ebebec;
-  font-size: 0;
-}
 nav {
   display: grid;
   width: 100%;
@@ -48,11 +41,18 @@ nav {
   right: 0;
   background-color: #333132;
   overflow: hidden;
+  z-index: 40;
+}
+main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(48,1fr);
+  background-color: #ebebec;
+  font-size: 0;
 }
 div {
   overflow: hidden;
 }
-
 /* Structural */
 .arrow {
   color: #ffda0d;
@@ -117,9 +117,10 @@ div {
 }
 .vLines {
   grid-column: 1 / 49;
-  margin-top: 5px;
+  margin-top: -1050px;
   display: grid;
   grid-template-columns: repeat(48,1fr);
+  z-index: 5;
 }
   .v1 {
     grid-column: 7 / 9;
@@ -204,6 +205,7 @@ div {
   grid-column: 1 / 49;
   display: grid;
   grid-template-columns: repeat(48,1fr);
+  z-index: 30;
 }
 .orange {
   grid-column: 14 / 36;
@@ -211,11 +213,37 @@ div {
   height: 20px;
   margin-top: 20px;
 }
+/* .orange::before {
+  content: url(../images/dot-orange.png);
+  margin-left: -10px;
+} */
+img {
+  margin-top: -5px;
+  height: 30px;
+  opacity: 0;
+  cursor: pointer;
+  transition: .5s ease;
+  -webkit-transition: .5s ease;
+}
+img .orangeL{
+}
+.orangeR {
+  grid-column: 14 /36;
+}
+.orange:hover img {
+  opacity: 1;
+}
 .orange2 {
   grid-column: 19 / 36;
   background-color: #f87b53;
   height: 20px;
   margin-top: 20px;
+  cursor: pointer;
+  transition: .5s ease;
+  -webkit-transition: .5s ease;
+}
+.orange2:hover img {
+  opacity: 1;
 }
 .purple {
   grid-column: 36 / 42;
