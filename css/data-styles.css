@@ -1,21 +1,198 @@
+@font-face {
+	font-family: 'rootBold';
+	src:
+    url('../fonts/root-bold.woff') format('woff'),
+    url('../fonts/root-bold.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'rootMedium';
+	src:
+	  url('../fonts/root-medium.woff') format("woff"),
+	  url('../fonts/root-medium.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Global: */
 html {
   font-size: 20px;
-  background-color: #ebebec;
+  background-color: #ffffff;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
-body, {
+body {
 }
 nav {
-  padding-left: 15vw;
-  padding-top: 120px;
+  display: grid;
+  width: 100%;
+  height: 150px;
+  grid-template-columns: repeat(48,1fr);
+  grid-template-rows: repeat(6,1fr);
+  font-family: rootBold, Helvetica, San-serif;
   color: white;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background-color: #333132;
+  overflow: hidden;
+}
+div {
+  overflow: hidden;
+}
+
+/* Structural */
+.arrow {
+  color: #ffda0d;
+  font-size: 2.8rem;
+}
+.line {
+  grid-area: 3 / 1 / 4 / 49;
+  background-color: #ffda0d;
+  height: 5px;
+}
+.title {
+  grid-area: 4 / 5 / 6 / 46;
+  padding-top: 5px;
+  text-align: center;
+  font-size: 2.5rem;
+  overflow: visible;
+  line-height: 1.5rem;
+}
+.caption {
+  font-family: rootMedium, helvetica, sans-serif;
+  grid-area: 4 / 8 / 6 / 15;
+  font-size: 0.7rem;
+  line-height: 0.75rem;
+  align-self: center;
+}
+.data {
+  grid-area: 4 / 37 / 6 / 42;
+  font-size: 0.8rem;
+  font-family: rootMedium, helvetica, sans-serif;
+  line-height: 0.8rem;
+  border: 1.5px solid white;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  align-self: center;
+  padding: 12px 6px;
+}
+.data:hover {
+  background-color: #ffda0d;
+  border: 1.5px solid #ffda0d;
+  color: #333132;
+}
+
+/* Vertical Lines: */
+.countryMarking {
+  display: grid;
+  width: 100%;
+  height: 5000px;
+  grid-template-columns: repeat(48,1fr);
+  background-color: #ebebec;
+  font-size: 0.8rem;
+  font-family: rootBold, helvetica, sans-serif;
+  color: #b1b3b6;
+  letter-spacing: 0.1rem;
+}
+  .v1 {
+    grid-column: 7 / 9;
+    border-left: 2px solid #b1b3b6;
+    position: relative;
+    height: 5000px;
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .v2 {
+    grid-column: 10 / 12;
+    border-left: 2px solid #b1b3b6;
+    height: 5000px;
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .v3 {
+    grid-column: 13 / 15;
+    border-left: 2px solid #b1b3b6;
+    height: 5000px;
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .v4 {
+    grid-column: 18 / 20;
+    border-left: 2px solid #b1b3b6;
+    height: 5000px;
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .v5 {
+    grid-column: 31 / 33;
+    border-left: 2px solid #b1b3b6;
+    height: 5000px;
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .v6 {
+    grid-column: 35 / 37;
+    border-left: 2px solid #b1b3b6;
+    height: 5000px;
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .v7 {
+    grid-column: 41 / 43;
+    border-left: 2px solid #b1b3b6;
+    height: 5000px;
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+/* Media Query */
+@media only screen and (max-width: 1280px) {
+
+}
+
+@media only screen and (max-width: 1180px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  .arrow {
+    font-size: 1.9rem;
+  }
+  .caption {
+    display: none;
+  }
+  .data {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .title {
+    font-size: 1.2rem;
+  }
+  .arrow {
+    font-size: 1.3rem;
+  }
+  .line {
+    height: 3px;
+  }
+  nav {
+    height: 120px;
+  }
 }
