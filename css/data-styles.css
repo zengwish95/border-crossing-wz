@@ -64,7 +64,7 @@ div {
   height: 5px;
 }
 .title {
-  grid-area: 4 / 5 / 6 / 46;
+  grid-area: 4 / 14 / 6 / 36;
   padding-top: 5px;
   text-align: center;
   font-size: 2.5rem;
@@ -207,16 +207,12 @@ div {
   grid-template-columns: repeat(48,1fr);
   z-index: 30;
 }
-.orange {
+.orange, .orangeright, .orangeleft {
   grid-column: 14 / 36;
   background-color: #f87b53;
   height: 20px;
   margin-top: 20px;
 }
-/* .orange::before {
-  content: url(../images/dot-orange.png);
-  margin-left: -10px;
-} */
 img {
   margin-top: -5px;
   height: 30px;
@@ -225,14 +221,15 @@ img {
   transition: .5s ease;
   -webkit-transition: .5s ease;
 }
-img .orangeL{
-}
-.orangeR {
-  grid-column: 14 /36;
-}
-.orange:hover img {
+.orangeright:hover img {
   opacity: 1;
 }
+.orangeleft:hover img {
+  opacity: 1;
+  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+}
+
 .orange2 {
   grid-column: 19 / 36;
   background-color: #f87b53;
@@ -303,6 +300,7 @@ img .orangeL{
 @media only screen and (max-width: 1180px) {
   .title {
     font-size: 1.8rem;
+    grid-area: 4 / 10 / 6 / 40;
   }
   .arrow {
     font-size: 1.9rem;
@@ -318,6 +316,7 @@ img .orangeL{
 @media only screen and (max-width: 540px) {
   .title {
     font-size: 1.2rem;
+    grid-area: 4 / 6 / 6 / 44;
   }
   .arrow {
     font-size: 1.3rem;
